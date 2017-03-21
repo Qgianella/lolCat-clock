@@ -6,6 +6,7 @@ var lunchTime = 13; //1pm
 var wakeUpTime = 7; //7am
 var napTime = lunchTime + 1; // 3pm
 var messageText;
+var timeEventJS = document.getElementById("timeEvent");
 
 if (time < noon) {
   messageText = "Good morning";
@@ -23,4 +24,4 @@ if (time < noon) {
   messageText = "Good afternoon";
 }
 
-console.log(messageText);
+timeEventJS.innerText=messageText;
