@@ -1,12 +1,13 @@
 body {
-  background-color: #f16059;
+
+  background-image: url("img/ag.jpg");
 }
 .page {
   width: 80%;
   max-width: 960px;
   margin: 50px auto;
   text-align: center;
-  background-color: #f16059;
+  background-color: rgba(238, 116, 49, 0.7);
   border-radius: 5px;
 }
 body {
