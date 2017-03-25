@@ -1,3 +1,5 @@
+var time = new Date().getHours();
+
 var noon = 12;
 var evening = 19; //7pm
 var partyTime = 17; //5pm
@@ -5,22 +7,29 @@ var lunchTime = 13; //1pm
 var wakeUpTime = 7; //7am
 var napTime = lunchTime + 1; // 3pm
 
+var timeEventJS = document.getElementById("timeEvent");
+
+//getting image element
+var lolcatImage = document.getElementById('lolcat');
+
 //*** PARTY BUTTON ***
 var partyButton = document.getElementById("partyTimeButton");
 
 var isPartyTime = false;
- //END PART BUTTON
+
+//***Time Selectors **
+var wakeUpTimeSelector =  document.getElementById("wakeUpTimeSelector");
+
+var lunchTimeSelector =  document.getElementById("lunchTimeSelector");
+
+var napTimeSelector =  document.getElementById("napTimeSelector");
 
 
 //updateClock wrapping everything will show seconds on clock:
 var updateClock = function()
 {
-var time = new Date().getHours();
-var messageText;
-var timeEventJS = document.getElementById("timeEvent");
 
-//getting image element
-var lolcatImage = document.getElementById('lolcat');
+var messageText;
 //defining default image
 var image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/08/normalTime.jpg";
 
@@ -104,8 +113,8 @@ updateClock();
 var oneSecond = 1000;
 setInterval( updateClock, oneSecond);
 
-//**** PARTY BUTTON ****
 
+//**** PARTY BUTTON function****
 
 var partyEvent = function() {
 
@@ -131,7 +140,31 @@ var partyEvent = function() {
 };
 
 
+//**Time Selectors Function
+
+var wakeUpEvent = function()
+{
+    wakeUpTime = wakeUpTimeSelector.value;
+};
+
+var lunchEvent = function()
+{
+    lunchTime = lunchTimeSelector.value;
+};
+
+var napEvent = function()
+{
+    napTime = wakeUpTimeSelector.value;
+};
 
 
+
+
+// ========= EVENT LISTENERS =============
 //ELEMENT.addEventListener("EVENT",EVENT HANDLER);
+
 partyButton.addEventListener("click", partyEvent);
+
+wakeUpTimeSelector.addEventListener('change', wakeUpEvent);
+lunchTimeSelector.addEventListener('change', lunchEvent);
+napTimeSelector.addEventListener('change', napEvent);
