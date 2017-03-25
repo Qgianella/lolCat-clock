@@ -5,7 +5,7 @@ var evening = 19; //7pm
 var partyTime = 17; //5pm
 var lunchTime = 13; //1pm
 var wakeUpTime = 7; //7am
-var napTime = lunchTime + 1; // 3pm
+var napTime = 15; // 3pm
 
 var timeEventJS = document.getElementById("timeEvent");
 
@@ -42,13 +42,13 @@ if (time < noon) {
   image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat4.jpg";
 } else if (time == lunchTime) {
   messageText = "It's time to eat!";
-  image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat2.jpg";
+  image = "http://i1383.photobucket.com/albums/ah289/qgianella/Screen%20Shot%202017-03-25%20at%203.49.43%20PM_zpsxkhm2xxf.png";
 } else if (time == wakeUpTime) {
   messageText = "Wakey, wakey..It's time to get up";
-  image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat1.jpg";
+  image = "http://kittentoob.com/wp-content/uploads/2013/06/Cats_Waking_Up_1.jpg";
 } else if (time == napTime) {
   messageText = "zzzz...it's nap time"
-  image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat3.jpg";
+  image = "http://healthiack.com/wp-content/uploads/cat-sleeping.jpg";
 } else {
   messageText = "Good afternoon";
 }
