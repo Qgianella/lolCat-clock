@@ -5,6 +5,13 @@ var lunchTime = 13; //1pm
 var wakeUpTime = 7; //7am
 var napTime = lunchTime + 1; // 3pm
 
+//*** PARTY BUTTON ***
+var partyButton = document.getElementById("partyTimeButton");
+
+var isPartyTime = false;
+ //END PART BUTTON
+
+
 //updateClock wrapping everything will show seconds on clock:
 var updateClock = function()
 {
@@ -96,3 +103,35 @@ updateClock();
 
 var oneSecond = 1000;
 setInterval( updateClock, oneSecond);
+
+//**** PARTY BUTTON ****
+
+
+var partyEvent = function() {
+
+   //check isPartyTime
+   if (isPartyTime == false){
+        // if isPartyTime is false, change it to true
+        //so we know the button has been clicked
+        isPartyTime = true;
+        // set time to partyTime so the lolCat clock
+        //image and message update to the partyTime image and message
+        time = partyTime;
+     partyTimeButton.innerText="PARTY TIME!";
+     partyTimeButton.style.background="#222";
+    } else {
+        // if isPartyTime is true, change it to false to end the party
+        isPartyTime = false;
+        // set time back to the current time
+        time = new Date().getHours();
+      partyTimeButton.innerText="PARTY OVER";
+      partyTimeButton.style.backgroundColor ="#0A8DAB";
+    }
+
+};
+
+
+
+
+//ELEMENT.addEventListener("EVENT",EVENT HANDLER);
+partyButton.addEventListener("click", partyEvent);
