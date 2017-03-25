@@ -42,7 +42,7 @@ if (time < noon) {
   image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat4.jpg";
 } else if (time == lunchTime) {
   messageText = "It's time to eat!";
-  image = "http://i1383.photobucket.com/albums/ah289/qgianella/Screen%20Shot%202017-03-25%20at%203.49.43%20PM_zpsxkhm2xxf.png";
+  image = "http://i1383.photobucket.com/albums/ah289/qgianella/lunchcat_zpscsvkdlzm.png";
 } else if (time == wakeUpTime) {
   messageText = "Wakey, wakey..It's time to get up";
   image = "http://kittentoob.com/wp-content/uploads/2013/06/Cats_Waking_Up_1.jpg";
