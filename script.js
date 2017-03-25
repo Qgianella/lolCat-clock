@@ -12,12 +12,12 @@ var timeEventJS = document.getElementById("timeEvent");
 //getting image element
 var lolcatImage = document.getElementById('lolcat');
 
-//*** PARTY BUTTON ***
+//*** PARTY BUTTON variables ***
 var partyButton = document.getElementById("partyTimeButton");
 
 var isPartyTime = false;
 
-//***Time Selectors **
+//***Time Selectors variables**
 var wakeUpTimeSelector =  document.getElementById("wakeUpTimeSelector");
 
 var lunchTimeSelector =  document.getElementById("lunchTimeSelector");
@@ -108,7 +108,7 @@ showCurrentTime();
 //call updateClock function:
 updateClock();
 
-//increment the clock once a second
+//increment the clock once a second ...1000 = 1second
 
 var oneSecond = 1000;
 setInterval( updateClock, oneSecond);
